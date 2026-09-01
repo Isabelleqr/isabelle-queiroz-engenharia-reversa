@@ -1,42 +1,243 @@
 <!DOCTYPE html>
-<html lang="pt=br">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>perfil</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>MTX Mecatrônica</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        mec: {
+                            bg: '#1B2024',
+                            panel: '#242B30',
+                            text: '#E7EAEC',
+                            amber: '#E8B923',
+                            line: '#333B40'
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Space Grotesk', 'sans-serif'],
+                        body: ['IBM Plex Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-    
-    <header>
-        <img src="./img/realfotok.png" alt="Foto Mars espelho casa do vô risos horrível paia.">
-        <h1>mᥲrs .ᐟ.ᐟ</h1>
-        <p>@quokkanela</p>
-        <p>Estudante de Desenvolvimento de Sistemas</p>
+
+<body class="bg-mec-bg text-mec-text font-body">
+    <header class="bg-mec-bg border-b border-mec-line">
+
+        <nav class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+
+            <a href="#" class="font-display text-xl font-bold">MTX<span class="text-mec-amber">Mecatrônica</span></a>
+
+            <ul class="hidden md:flex gap-6 text-sm">
+                <li>
+                    <a href="#solucoes" class="hover:text-mec-amber">Soluções</a>
+                </li>
+
+                <li>
+                    <a href="#processo" class="hover:text-mec-amber">
+                        Processo
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#resultados" class="hover:text-mec-amber">Clientes</a>
+                </li>
+
+                <li>
+                    <a href="#contato" class="bg-mec-amber text-mec-bg px-4 py-2 rounded-full">Pedir orçamento</a>
+                </li>
+            </ul>
+        </nav>
     </header>
-    <main>
 
-        <!--sobre mim-->
-        <section class="card">
-            <h2>Sobre mim</h2>
-            <a href="/sobre mim/index.html">Saiba Mais</a>
-        </section>
+    <section class="py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-10 items-center">
 
-        <!--projetos-->
-        <section class="card">
-            <h2>Projetos</h2>
-            <a href="https://github.com/Isabelleqr?tab=repositories" target="_blank">Ver no GitHub</a>
-        </section>
+                <div>
+                    <h1 class="font-display font-bold text-5xl leading-none">Mecânica,<br>eletrônica e<br>
 
-        <!--cursos-->
-        <section class="card">
-            <h2>Cursos</h2>
-            <a href="/cursos/index.html">Meus Cursos</a>
-        </section>
-        <footer>
-            <p>Atualizado por mim em 2026!!</p>
-        </footer>
-    </main>
+                        <span class="text-mec-amber">software</span>, numa<br>peça só.
+                    </h1>
+
+                    <p class="mt-6 text-mec-text/70">Projetamos e integramos sistemas automatizados pra linhas de produção, do sensor ao painel de controle.</p>
+
+                    <div class="mt-6 flex gap-3">
+                        <a href="#contato" class="bg-mec-amber text-mec-bg px-5 py-3 rounded-full font-semibold">Pedir orçamento</a>
+
+                        <a href="#solucoes" class="border border-mec-text/40 px-5 py-3 rounded-full">Ver soluções</a>
+                    </div>
+                </div>
+
+                <div class="flex justify-center">
+                    <div class="bg-[#353522] p-5 rounded-[30px]">
+                        <div class="bg-mec-panel rounded-[25px] w-80 h-60 flex items-center justify-center">
+                            <span class="text-6xl">⚙️</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="solucoes" class="py-12">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-2xl font-display font-bold text-center">Soluções</h2>
+
+            <p class="text-center text-sm text-mec-text/60 mt-2">O que a gente projeta e integra.</p>
+
+            <div class="grid md:grid-cols-3 gap-4 mt-8">
+                <div class="bg-mec-panel p-5 rounded-lg">
+                    <div class="text-2xl">🤖</div>
+
+                    <h3 class="font-bold mt-3">Robótica industrial</h3>
+
+                    <p class="text-sm text-mec-text/60 mt-2">Braços robóticos programados sob medida para montagem e paletização.</p>
+                </div>
+
+                <div class="bg-mec-panel p-5 rounded-lg">
+
+                    <div class="text-2xl">🏭</div>
+
+                    <h3 class="font-bold mt-3">Automação de linhas</h3>
+
+                    <p class="text-sm text-mec-text/60 mt-2">Sensores, atuadores e CLPs integrados numa esteira já existente.</p>
+                </div>
+
+                <div class="bg-mec-panel p-5 rounded-lg">
+                    <div class="text-2xl">🔧</div>
+
+                    <h3 class="font-bold mt-3">Manutenção preditiva</h3>
+
+                    <p class="text-sm text-mec-text/60 mt-2">Monitoramento em tempo real para prever falhas antes que aconteçam.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="processo" class="bg-[#22292E] py-12">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-2xl font-display font-bold text-center">Como um projeto acontece</h2>
+
+            <div class="grid md:grid-cols-4 gap-6 mt-8">
+                <div>
+                    <p class="text-mec-amber font-bold">01</p>
+
+                    <h3 class="font-bold mt-2">Diagnóstico</h3>
+
+                    <p class="text-sm text-mec-text/60 mt-2">Visitamos a linha e mapeamos gargalos e riscos.</p>
+                </div>
+
+                <div>
+                    <p class="text-mec-amber font-bold">02</p>
+
+                    <h3 class="font-bold mt-2">Projeto</h3>
+
+                    <p class="text-sm text-mec-text/60 mt-2">Desenho elétrico, mecânico e lógica de controle.</p>
+                </div>
+
+                <div>
+                    <p class="text-mec-amber font-bold">03</p>
+
+                    <h3 class="font-bold mt-2">Integração</h3>
+
+                    <p class="text-sm text-mec-text/60 mt-2">Instalação, testes e ajuste fino com a equipe local.</p>
+                </div>
+
+                <div>
+                    <p class="text-mec-amber font-bold">04</p>
+
+                    <h3 class="font-bold mt-2">Suporte contínuo</h3>
+
+                    <p class="text-sm text-mec-text/60 mt-2">Monitoramento remoto e manutenção programada.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resultados" class="py-12">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-2xl font-display font-bold text-center">Resultados em campo</h2>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8 text-center">
+                <div>
+                    <p class="text-mec-amber text-2xl font-bold">64</p>
+
+                    <p class="text-sm text-mec-text/60">painéis instalados</p>
+                </div>
+
+                <div>
+                    <p class="text-mec-amber text-2xl font-bold">11</p>
+
+                    <p class="text-sm text-mec-text/60">anos de mercado</p>
+                </div>
+
+                <div>
+                    <p class="text-mec-amber text-2xl font-bold">99,2%</p>
+
+                    <p class="text-sm text-mec-text/60">uptime médio</p>
+                </div>
+
+                <div>
+                    <p class="text-mec-amber text-2xl font-bold">30+</p>
+
+                    <p class="text-sm text-mec-text/60">fábricas atendidas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="py-12">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-10">
+
+                <div>
+                    <h2 class="text-2xl font-display font-bold">Peça um orçamento</h2>
+
+                    <p class="text-sm text-mec-text/60 mt-3">Conte um pouco sobre sua linha de produção - respondemos em até 2 dias úteis com uma proposta inicial.</p>
+
+                    <p class="text-sm mt-5">📍 Rod. Industrial, km 12 - Distrito Industrial</p>
+
+                    <p class="text-sm mt-2">🕑 Seg a sex, 8h às 18h</p>
+
+                    <p class="text-sm mt-2">📞 (11) 4111-2290</p>
+                </div>
+
+                <form>
+                    <label class="text-sm">Nome</label>
+                    <input type="text" placeholder="Seu nome" class="w-full bg-mec-panel border border-mec-line rounded p-3 mt-1 mb-4">
+
+                    <label class="text-sm">E-mail</label>
+                    <input type="email" placeholder="voce@empresa.com" class="w-full bg-mec-panel border border-mec-line rounded p-3 mt-1 mb-4">
+
+                    <label class="text-sm">Conte sobre a linha</label>
+                    <textarea placeholder="Tipo de máquina, gargalo atual..." class="w-full bg-mec-panel border border-mec-line rounded p-3 mt-1 mb-4"></textarea>
+                    <button class="w-full bg-mec-amber text-mec-bg py-3 rounded-full font-bold">Enviar pedido</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="border-t border-mec-line py-5">
+        <div class="max-w-6xl mx-auto px-6 flex justify-between text-xs">
+            <p>&copy; 2026 MTX Mecatrônica</p>
+            <p>LinkedIn &nbsp; WhatsApp</p>
+        </div>
+    </footer>
 
 </body>
 </html>
